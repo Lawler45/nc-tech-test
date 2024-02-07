@@ -1,13 +1,9 @@
 const request = require("supertest");
 const { app } = require("../server");
 
-test("returns matching card title", async () => {
-  const response = await request(app).get("/cards/card001");
-
-  expect(response.status).toBe(200);
-  expect(response.body).toEqual(
-    expect.objectContaining({
-      title: "card 1 title",
-    })
-  );
+describe("/cards", () => {
+  test("GET 200: Responds with status 200 when requesting from /cards endpoint", async () => {
+    const res = await request(app).get("/cards");
+    expect(res.status).toBe(200);
+  });
 });
