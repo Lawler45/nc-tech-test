@@ -8,7 +8,7 @@ app.set("json spaces", 2);
 
 app.get("/cards", getCards);
 
-app.get("/cards/:cardId/:sizeId?", () => {
+app.get("/cards/:cardId/", () => {
   // respond with card by id
 });
 
