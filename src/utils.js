@@ -1,4 +1,4 @@
-const  Card  = require("./classes/card");
+const Card = require("./classes/card");
 
 //Extracts the image url and id to be formatted into the cards
 exports.getImageUrl = (templates) => {
@@ -21,3 +21,22 @@ exports.formatCards = (cards, idUrlObj) => {
 
   return formattedCards;
 };
+
+//Extracts sizes
+exports.getSizes = (sizes) => {
+  const sizeTitles = { sm: "Small", md: "Medium", lg: "Large", gt: "Giant" };
+
+  const mappedSizes = [];
+
+  sizes.forEach((size) => {
+    const sizeInfo = {};
+    sizeInfo.id = size;
+    sizeInfo.title = sizeTitles[size];
+    if (sizeInfo.title) {
+      mappedSizes.push(sizeInfo);
+    }
+  });
+
+  return mappedSizes;
+};
+
