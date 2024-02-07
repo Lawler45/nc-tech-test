@@ -1,7 +1,7 @@
 const { selectCards } = require("../models/cardModel");
 
 exports.getCards = (req, res, next) => {
-  selectCards().then(() => {
-    res.status(200).send({});
+  selectCards().then((cards) => {
+    res.status(200).send({cards: cards});
   });
 };
