@@ -13,3 +13,13 @@ exports.selectCards = async () => {
 
   return formattedCards;
 };
+
+exports.selectCardById = async (cardId) => {
+  const readCard = fs.readFile("src/data/cards.json", "utf-8");
+  const readTemplate = fs.readFile("src/data/templates.json", "utf-8");
+
+  const [cards, templates] = await Promise.all([readCard, readTemplate]);
+
+  const formattedUrl = getImageUrl(JSON.parse(templates));
+}
+

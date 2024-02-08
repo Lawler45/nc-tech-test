@@ -1,1 +1,1 @@
-Please add any additional notes here…
+Due to work and being busy I could only approach the challenge intermittently throughout the day, accumulating close to 4 hours of coding. Unfortunately, I reached the time limit before completing the "GET /cards/:cardId" endpoint. Several issues arose during testing, leading to an incomplete implementation. Given more time, I planned to address the error that was occuring by formating singlecard correctly and build up a few more tests around it. 
